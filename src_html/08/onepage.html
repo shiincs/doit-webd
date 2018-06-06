@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>원 페이지 사이트</title>
+    <link rel="stylesheet" href="../../src_css/08/onepage.css">
+</head>
+<body>
+<header>    
+    <nav>
+        <a href="#eu" class="nav-btn">유럽</a>
+        <a href="#us" class="nav-btn">미국</a>
+        <a href="#ch" class="nav-btn">중국</a>
+        <a href="#jp" class="nav-btn">일본</a>
+    </nav>
+</header>
+<main>
+    <section id="eu" class="page1">
+        <h2>Europe</h2>
+    </section>
+    <section id="us" class="page2">
+        <h2>United States</h2>
+    </section>
+    <section id="ch" class="page3">
+        <h2>China</h2>
+    </section>
+    <section id="jp" class="page4">
+        <h2>Japan</h2>
+    </section>
+</main>
+<footer>
+
+</footer>
+<script src="../../src_js/08/jquery-2.2.4.min.js"></script>
+<script src="../../src_js/08/jquery.scrollTo.min.js"></script>
+<script>
+    $(function() {
+        $('nav a').click(function(e) {
+            $.scrollTo(this.hash || 0, 1000);
+            e.preventDefault();
+        });
+    });
+</script>
+</body>
+</html>
